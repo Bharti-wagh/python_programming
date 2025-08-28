@@ -1,2 +1,3 @@
 # python_programming
-A comprehensive collection of Python programming projects, tutorials, and resources designed to help beginners and experienced developers alike. This repository includes a variety of examples, from basic syntax and data structures to advanced topics such as web development, data analysis, and machine learning.
+This repository contains everything I’ve learned in Python, organized **chapter-wise** with examples and mini-projects.  
+The goal is to track my progress and help beginners follow along.  
