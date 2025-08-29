@@ -1,0 +1,4 @@
+#WAP TO FIND REMINDER WHEN NUMBER IS DIVIDED BY Z
+NUM=10
+NUM2=2
+print("num divided by num2 is : ",NUM%NUM2)
