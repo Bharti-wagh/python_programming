@@ -1,0 +1,5 @@
+#WAP PROGRAM TO SUM A LIST WITH 4 NUMBERS. 
+
+L1=[1,2,3,4]
+
+print(sum(L1))
