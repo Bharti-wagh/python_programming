@@ -1,0 +1,7 @@
+#WAP WHICH FIND OUT WHEATHER A GIVEN NAME IS PRESENT IN A LIST OR NOT.
+LIST=["BHARTI","BHAKTI","BHARGAVI","BHUMI","BHAVNA"]
+NAME=input("ENTER NAME ")
+if (NAME in LIST):
+    print("FIND")
+else:
+    print("not find")
