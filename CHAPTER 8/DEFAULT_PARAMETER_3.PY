@@ -1,0 +1,6 @@
+def GOODDAY(NAME,ENDING="THANK YOU"):
+    print(F"GOOD DAY",NAME)
+    print(ENDING)
+
+
+GOODDAY("BHARTI") 
