@@ -1,0 +1,4 @@
+words = ["Python", "is", "interesting"]
+
+sentence = " ".join(words)  
+print(sentence)
