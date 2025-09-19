@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "question": "What is the output of print(2 ** 3)?",
+      "options": ["5", "6", "8", "9"],
+      "answer": "8"
+    },
+    {
+      "question": "Which of the following is a mutable data type in Python?",
+      "options": ["tuple", "list", "string", "int"],
+      "answer": "list"
+    },
+    {
+    "question": "What does the len() function do?",
+    "options": [
+      "Returns the size of memory",
+      "Returns number of items in an object",
+      "Counts only numbers",
+      "None of the above"
+    ],
+    "answer": "Returns number of items in an object"
+    },
+    {
+    "question": "What is the correct file extension for Python files?",
+    "options": [".pyth", ".pt", ".py", ".pyt"],
+    "answer": ".py"
+  },
+  {
+    "question": "Which keyword is used for function in Python?",
+    "options": ["func", "define", "def", "function"],
+    "answer": "def"
+  },
+  {
+    "question": "What will be the output of print(type([]))?",
+    "options": ["<class 'list'>", "<class 'tuple'>", "<class 'dict'>", "<class 'set'>"],
+    "answer": "<class 'list'>"
+  },
+  {
+    "question": "Which operator is used for floor division in Python?",
+    "options": ["/", "//", "%", "**"],
+    "answer": "//"
+  },
+  {
+    "question": "What is the output of print(bool(''))?",
+    "options": ["True", "False", "Error", "None"],
+    "answer": "False"
+  },
+  {
+    "question": "Which of the following is not a Python keyword?",
+    "options": ["class", "eval", "return", "lambda"],
+    "answer": "eval"
+  },
+  {
+    "question": "What does the 'break' statement do in Python?",
+    "options": [
+      "Skips the current iteration",
+      "Exits the loop immediately",
+      "Stops program execution",
+      "None of the above"
+    ],
+    "answer": "Exits the loop immediately"
+  }
+  ]
+}
