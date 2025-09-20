@@ -5,14 +5,14 @@ from datetime import datetime
 
 FILENAME = "expenses.csv"
 
-# ====== Initialize CSV if not exists ======
+# CSV if not exists
 def init_file():
     if not os.path.exists(FILENAME):
         with open(FILENAME, mode="w", newline="") as file:
             writer = csv.writer(file)
             writer.writerow(["date", "category", "amount", "description"])
 
-# ====== Add Expense ======
+#Add Expense
 def add_expense():
     date = date_entry.get()
     if date.strip() == "":
@@ -40,7 +40,7 @@ def add_expense():
     clear_entries()
     load_expenses()
 
-# ====== Load Expenses into Table ======
+#Load Expenses into Table
 def load_expenses(filter_category=None):
     for row in tree.get_children():
         tree.delete(row)
@@ -51,7 +51,7 @@ def load_expenses(filter_category=None):
             if filter_category is None or row["category"].lower() == filter_category.lower():
                 tree.insert("", "end", values=(row["date"], row["category"], row["amount"], row["description"]))
 
-# ====== Calculate Total ======
+#Calculate Total
 def show_total():
     total = 0
     with open(FILENAME, mode="r") as file:
@@ -60,7 +60,7 @@ def show_total():
             total += float(row["amount"])
     messagebox.showinfo("Total Expenses", f"💰 Total: {total}")
 
-# ====== Filter by Category ======
+#Filter by Category
 def filter_category():
     category = category_filter_entry.get()
     if category.strip() == "":
@@ -68,21 +68,21 @@ def filter_category():
     else:
         load_expenses(category)
 
-# ====== Clear Input Fields ======
+# Clear Input Fields
 def clear_entries():
     date_entry.delete(0, tk.END)
     category_entry.delete(0, tk.END)
     amount_entry.delete(0, tk.END)
     desc_entry.delete(0, tk.END)
 
-# ====== GUI Setup ======
+#GUI Setup
 init_file()
 root = tk.Tk()
 root.title("💰 Expense Tracker")
 root.geometry("700x500")
 root.resizable(False, False)
 
-# ---- Input Frame ----
+#Input Frame
 frame = tk.Frame(root)
 frame.pack(pady=10)
 
@@ -105,7 +105,7 @@ desc_entry.grid(row=3, column=1, padx=5)
 add_btn = tk.Button(frame, text="Add Expense", command=add_expense, bg="lightgreen", width=20)
 add_btn.grid(row=4, column=0, columnspan=2, pady=10)
 
-# ---- Table for Expenses ----
+# Table for Expenses
 columns = ("Date", "Category", "Amount", "Description")
 tree = ttk.Treeview(root, columns=columns, show="headings", height=10)
 for col in columns:
@@ -113,7 +113,7 @@ for col in columns:
     tree.column(col, width=150 if col != "Description" else 250)
 tree.pack(pady=10)
 
-# ---- Action Buttons ----
+#Action Buttons
 btn_frame = tk.Frame(root)
 btn_frame.pack(pady=10)
 
@@ -129,7 +129,7 @@ filter_btn.grid(row=0, column=3, padx=5)
 reset_btn = tk.Button(btn_frame, text="Reset", command=lambda: load_expenses(), bg="gray", width=15)
 reset_btn.grid(row=0, column=4, padx=5)
 
-# Load initial data
+#Load initial data
 load_expenses()
 
 root.mainloop()
